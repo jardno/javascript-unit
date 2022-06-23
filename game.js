@@ -17,9 +17,6 @@ function computerPlay(playerSelection, computerSelection) {
     console.log("Computer chose");
     console.log(computerSelection);
 
-    return playerSelection;
-    return computerSelection;
-
     if (playerSelection == computerSelection) {
         prompt("Tie! Play again? Y/N");
     } else if (playerSelection == "rock") {

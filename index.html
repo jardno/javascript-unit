@@ -4,11 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="game.js"></script>
-
+    
     <title>Document</title>
 </head>
 <body>
-    
+    <button type="button" onclick="shoot(1) ">Rock</button>
+    <button type="button" onclick="shoot(2) ">Paper</button>
+    <button type="button" onclick="shoot(3) ">Scissors</button>
+    <p id="demo"></p>
+
+    <script>
+        let choice;
+
+        function shoot(choice) {
+            let x = choice;
+            document.getElementById("demo").innerHTML = x;
+        }
+
+    </script>
+
+    <button type="button" onclick="calltoArms() ">Randomize Call to Arms</button>
+    <p id="c2a"></p>
+
+    <script>
+        let locationList = ['Blackwater', 'Valentine', 'MacFarlane Ranch', 'Strawberry', 'Ft. Mercer'];
+        let destination;
+
+        function calltoArms() {
+            var randomChoice = Math.floor(Math.random() * 5);
+            var destination = locationList[randomChoice];
+
+            document.getElementById("c2a").innerHTML = destination;
+        }
+    </script>
 </body>
 </html>
